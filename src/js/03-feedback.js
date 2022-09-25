@@ -1,37 +1,36 @@
 import throttle from 'lodash.throttle';
-{
-  /* <form class="feedback-form" autocomplete="off">
-  <label>
-    Email
-    <input type="email" name="email" autofocus />
-  </label>
-  <label>
-    Message
-    <textarea name="message" rows="8"></textarea>
-  </label>
-  <button type="submit">Submit</button>
-</form>; */
+
+const refs = {
+  form: document.querySelector('.feedback-form'),
+  email: document.querySelector('input[name=email]'),
+  message: document.querySelector('textarea[name=message'),
+};
+
+refs.form.addEventListener('input', throttle(onFormInput, 1000));
+refs.form.addEventListener('submit', onFormSubmit);
+
+const LOCAL_STORAGE_KEY = 'feedback-form-state';
+const userMessage = {};
+
+populateFormInput();
+
+function onFormInput(e) {
+  userMessage[e.target.name] = e.target.value;
+  localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(userMessage));
 }
 
-const form = document.querySelector('.feedback-form');
+function onFormSubmit(e) {
+  e.preventDefault();
+  e.currentTarget.reset();
+  localStorage.removeItem(LOCAL_STORAGE_KEY);
+  console.log(userMessage);
+}
 
-const emailInputRef = document.querySelector;
-
-const LOCALSTORAGE_KEY = 'feedback-form-state';
-
-let userMessage = {};
-
-form.addEventListener(
-  'submit',
-  throttle(e => {
-    e.preventDefault();
-    const { email, message } = e.currentTarget;
-    userMessage.email = email.value;
-    userMessage.message = message.value;
-    // console.log(userMessage);
-  }, 500)
-);
-
-form.addEventListener('input', e => {
-  console.log(e.email.value);
-});
+function populateFormInput() {
+  const savedUserMessage = localStorage.getItem(LOCAL_STORAGE_KEY);
+  const parsedUserMessage = JSON.parse(savedUserMessage);
+  if (savedUserMessage) {
+    refs.email.value = parsedUserMessage.email;
+    refs.message.value = parsedUserMessage.message;
+  }
+}
