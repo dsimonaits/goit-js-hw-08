@@ -8,6 +8,8 @@ const refs = {
 
 refs.form.addEventListener('input', throttle(onFormInput, 500));
 refs.form.addEventListener('submit', onFormSubmit);
+refs.email.setAttribute('required', '');
+refs.message.setAttribute('required', '');
 
 const LOCAL_STORAGE_KEY = 'feedback-form-state';
 let userMessage = localStorage.getItem(LOCAL_STORAGE_KEY)
