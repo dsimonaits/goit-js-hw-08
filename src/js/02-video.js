@@ -8,9 +8,6 @@ const LOCALSTORAGE_KEY = 'videoplayer-current-time';
 player.on(
   'timeupdate',
   throttle(data => {
-    if (!localStorage.getItem(LOCALSTORAGE_KEY) === '') {
-      player.setCurrentTime(localStorage.getItem(LOCALSTORAGE_KEY));
-    }
     localStorage.setItem(LOCALSTORAGE_KEY, data.seconds);
   }, 1000)
 );
