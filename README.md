@@ -28,8 +28,7 @@ more import, aside from the one described in the documentation.
 <h2>Task 2 - video player</h2> 
 In HTML, there is <iframe> with video for Vimeo player. Write a script that will save the current video playback time to local storageand, upon page reload, continue to play the video from that time.
 
-```
-
+```js
 <iframe
   id="vimeo-player"
   src="https://player.vimeo.com/video/236203659"
