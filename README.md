@@ -1,20 +1,23 @@
-Acceptance criteria goit-js-hw-08 repository created. In your submitted
-homework, there are two links: to the source files and your working page on
-GitHub Pages. During live page visits, there are no errors or warnings generated
-in the console. Project built with parcel-project-template. Code formatted with
-Prettier. Start files Скачай стартовые файлы с готовой разметкой, стилями и
-подключенными файлами скриптов для каждого задания. Скопируй их себе в проект,
-полностью заменив папку src в parcel-project-template.
+<h1>Acceptance criteria</h1>
+<lu>
+<li>goit-js-hw-08 repository created.</li>
+ <li>In your submittedhomework, there are two links: to the source files and your working page on GitHub Pages.</li>
+<li>During live page visits, there are no errors or warnings generated
+in the console.</li>
+<li>Project built with parcel-project-template. </li>
+<li>Code formatted with Prettier.</li>
+</lu>
 
-Task 1 - SimpleLightbox library Do this task in the 01-gallery.html and
-01-gallery.js files. Break it down into several subtasks:
+<h2>Task 1 - SimpleLightbox library</h2> 
+Do this task in the 01-gallery.html and 01-gallery.js files. Break it down into several subtasks:
 
-Add the SimpleLightbox library as a project dependency using npm (the CDN link
-from your past work is no longer needed). Use your JavaScript code from the
-previous homework, but refactor it given that the library was installed via npm
-(import/export syntax). In order to add the CSS code of the library to the
-project, you need to add one more import, aside from the one described in the
-documentation.
+<ol>
+<li>Add the SimpleLightbox library as a project dependency using npm (the CDN link from your past work is no longer needed).</li>
+<li> Use your JavaScript code from the previous homework, but refactor it given that the library was installed via npm (import/export syntax). </li>
+</ol>
+
+In order to add the CSS code of the library to the project, you need to add one
+more import, aside from the one described in the documentation.
 
 // Described in documentation;
 
