@@ -25,10 +25,9 @@ more import, aside from the one described in the documentation.
 
 `import "simplelightbox/dist/simple-lightbox.min.css";`
 
-Task 2 - video player In HTML, there is <iframe> with video for Vimeo player.
-Write a script that will save the current video playback time to local storage
-and, upon page reload, continue to play the video from that time.
-
+<h2>Task 2 - video player</h2> 
+In HTML, there is <iframe> with video for Vimeo player. Write a script that will save the current video playback time to local storage and, upon page reload, continue to play the video from that time.
+```
 <iframe
   id="vimeo-player"
   src="https://player.vimeo.com/video/236203659"
@@ -38,7 +37,7 @@ and, upon page reload, continue to play the video from that time.
   allowfullscreen
   allow="autoplay; encrypted-media"
 ></iframe>
-
+```
 Do this task in the 02-video.html and 02-video.js files. Break it down into
 several subtasks:
 
