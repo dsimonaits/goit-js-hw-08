@@ -21,9 +21,9 @@ more import, aside from the one described in the documentation.
 
 // Described in documentation;
 
-import SimpleLightbox from "simplelightbox"; // Additional styles import
+`import SimpleLightbox from "simplelightbox";`
 
-import "simplelightbox/dist/simple-lightbox.min.css";
+`import "simplelightbox/dist/simple-lightbox.min.css";`
 
 Task 2 - video player In HTML, there is <iframe> with video for Vimeo player.
 Write a script that will save the current video playback time to local storage
